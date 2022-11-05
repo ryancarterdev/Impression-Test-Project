@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'DMSans Regular';
+    src: url(/Impression-Test-Project/wp-content/themes/twentytwentyone/fonts/DMSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'DMSans Medium';
+    src: url(/Impression-Test-Project/wp-content/themes/twentytwentyone/fonts/DMSans-Medium.ttf);
+}
+
+
+html { font-size: 62.5%; }
+
+body {
+    font-family: 'DMSans Regular';
+    margin: 0;
+}

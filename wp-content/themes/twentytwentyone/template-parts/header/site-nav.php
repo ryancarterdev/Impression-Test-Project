@@ -13,7 +13,7 @@
 	<nav id="site-navigation" class="primary-navigation" aria-label="<?php esc_attr_e( 'Primary menu', 'twentytwentyone' ); ?>">
 		<div class="menu-button-container">
 			<button id="primary-mobile-menu" class="button" aria-controls="primary-menu-list" aria-expanded="false">
-				<span class="dropdown-icon open"><?php esc_html_e( 'Menu', 'twentytwentyone' ); ?>
+				<span class="js-menu-open"><?php esc_html_e( 'Menu', 'twentytwentyone' ); ?>
 					<?php echo twenty_twenty_one_get_icon_svg( 'ui', 'menu' ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
 				</span>
 				<span class="dropdown-icon close"><?php esc_html_e( 'Close', 'twentytwentyone' ); ?>
@@ -33,5 +33,6 @@
 		);
 		?>
 	</nav><!-- #site-navigation -->
+	<h1>hello</h1>
 	<?php
 endif;

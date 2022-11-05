@@ -465,6 +465,14 @@ function twenty_twenty_one_scripts() {
 		wp_get_theme()->get( 'Version' ),
 		true
 	);
+
+	wp_enqueue_script(
+		'twenty-twenty-one-carousel',
+		get_template_directory_uri() . '/assets/js/carousel.js',
+		array( 'twenty-twenty-one-ie11-polyfills' ),
+		wp_get_theme()->get( 'Version' ),
+		true
+	);
 }
 add_action( 'wp_enqueue_scripts', 'twenty_twenty_one_scripts' );
 
