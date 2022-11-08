@@ -1,0 +1,113 @@
+.carousel {
+
+}
+
+.carousel__item {
+    position: relative;
+    height: 100%;
+}
+
+.carousel__background {
+    height: 100%;
+    width: 100%;
+    min-height: 60rem;
+    background-color: $darkPurple;
+    padding: 10rem 0 0;
+}
+
+.carousel__background-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    min-height: 60rem;
+    background-color: $secondary;
+}
+
+.carousel__wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    padding: 2rem;
+}
+
+.carousel__header {
+    font-family: 'InformaPro Bold';
+    font-size: 3.8rem;
+    line-height: 3.8rem;
+    text-transform: uppercase;
+    color: $white;
+    display: inline-block;
+    transform: scale(1, 1.2);
+    margin: 3rem 0;
+}
+
+.carousel__text {
+    font-size: 1.7rem;
+    color: $white;
+    margin: 0 0 3rem;
+}
+
+.carousel__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    a {
+        width: calc(50% - 0.5rem);
+    }
+}
+
+.carousel__roundal {
+    background-color: $orange;
+    width: 22.6rem;
+    height: 22.6rem;
+    border-radius: 100rem;
+    position: relative;
+    transform: scale(0.6);
+    transform-origin: top left;
+    margin: 3rem 0 0;
+}
+
+.carousel__roundal-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 10rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    
+    span {
+        font-family: 'InformaPro Bold'; 
+        font-size: 8.2rem;
+        color: $white;
+        width: 70%;
+        font-stretch: expanded;
+        display: inline-block;
+        transform: scale(1, 1.4);
+    }
+}
+
+.carousel__roundal-inner-wrapper {
+    span {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 30%;
+        text-transform: uppercase;
+
+        &:first-of-type {
+            padding: 0.3rem 0 0;
+            font-size: 5rem;
+        }
+
+        &:not(:first-of-type) {
+            font-size: 2.6rem;
+        }
+    }
+}

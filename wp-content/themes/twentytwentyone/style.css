@@ -1,3 +1,94 @@
+.button {
+	display: block;
+	font-family: "InformaPro Bold";
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	color: #fff;
+	background-color: #b01674;
+	padding: 1rem;
+	border-radius: 5rem;
+	max-width: 20rem;
+	width: 100%;
+	text-align: center;
+	text-decoration: none;
+}
+@media (min-width: 768px) {
+
+	.button {
+		position: relative;
+		max-width: 16rem;
+		font-size: 1.6rem;
+		text-align: left;
+		padding: 1.2rem 2rem;
+		z-index: 1;
+		overflow: hidden;
+		transition: 0.3s;
+	}
+
+	.button::before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0%;
+		height: 100%;
+		background-color: #fff;
+		transition: 0.3s;
+		border-radius: 5rem;
+		z-index: -1;
+	}
+
+	.button::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 1.4rem;
+		width: 1.5rem;
+		height: 1rem;
+		background-image: url(./assets/images/icons/button-arrow.svg);
+		background-size: 100%;
+		background-repeat: no-repeat;
+		margin: auto 0;
+		transition: 0.3s;
+	}
+
+	.button:hover {
+		color: #b01674;
+	}
+
+	.button:hover::before {
+		width: 100%;
+	}
+
+	.button:hover::after {
+		background-image: url(./assets/images/icons/button-arrow--primary.svg);
+	}
+}
+
+.button--secondary {
+	background-color: #fff;
+	color: #001f5f;
+}
+@media (min-width: 768px) {
+
+	.button--secondary::before {
+		background-color: #001f5f;
+	}
+
+	.button--secondary::after {
+		background-image: url(./assets/images/icons/button-arrow--navy.svg);
+	}
+
+	.button--secondary:hover {
+		color: #fff;
+	}
+
+	.button--secondary:hover::after {
+		background-image: url(./assets/images/icons/button-arrow.svg);
+	}
+}
+
 .button--inline {
 	font-family: "DMSans Medium";
 	font-size: 1.2rem;
@@ -65,6 +156,10 @@
 	font-family: "DMSans Medium";
 	src: url(/Impression-Test-Project/wp-content/themes/twentytwentyone/fonts/DMSans-Medium.ttf);
 }
+@font-face {
+	font-family: "InformaPro Bold";
+	src: url(/Impression-Test-Project/wp-content/themes/twentytwentyone/fonts/InformaPro-Bold.otf);
+}
 
 html {
 	font-size: 62.5%;
@@ -73,6 +168,114 @@ html {
 body {
 	font-family: "DMSans Regular";
 	margin: 0;
+}
+
+.carousel__item {
+	position: relative;
+	height: 100%;
+}
+
+.carousel__background {
+	height: 100%;
+	width: 100%;
+	min-height: 60rem;
+	background-color: #391c3a;
+	padding: 10rem 0 0;
+}
+
+.carousel__background-image {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	min-height: 60rem;
+	background-color: #782d70;
+}
+
+.carousel__wrapper {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto 0;
+	padding: 2rem;
+}
+
+.carousel__header {
+	font-family: "InformaPro Bold";
+	font-size: 3.8rem;
+	line-height: 3.8rem;
+	text-transform: uppercase;
+	color: #fff;
+	display: inline-block;
+	transform: scale(1, 1.2);
+	margin: 3rem 0;
+}
+
+.carousel__text {
+	font-size: 1.7rem;
+	color: #fff;
+	margin: 0 0 3rem;
+}
+
+.carousel__buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.carousel__buttons a {
+	width: calc(50% - 0.5rem);
+}
+
+.carousel__roundal {
+	background-color: #f8a500;
+	width: 22.6rem;
+	height: 22.6rem;
+	border-radius: 100rem;
+	position: relative;
+	transform: scale(0.6);
+	transform-origin: top left;
+	margin: 3rem 0 0;
+}
+
+.carousel__roundal-wrapper {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	height: 10rem;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.carousel__roundal-wrapper span {
+	font-family: "InformaPro Bold";
+	font-size: 8.2rem;
+	color: #fff;
+	width: 70%;
+	font-stretch: expanded;
+	display: inline-block;
+	transform: scale(1, 1.4);
+}
+
+.carousel__roundal-inner-wrapper span {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	width: 30%;
+	text-transform: uppercase;
+}
+
+.carousel__roundal-inner-wrapper span:first-of-type {
+	padding: 0.3rem 0 0;
+	font-size: 5rem;
+}
+
+.carousel__roundal-inner-wrapper span:not(:first-of-type) {
+	font-size: 2.6rem;
 }
 
 .usp {

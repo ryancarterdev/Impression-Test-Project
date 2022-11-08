@@ -472,6 +472,7 @@ function twenty_twenty_one_scripts() {
 
 		wp_enqueue_script('slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array(), null, true);
 
+		wp_enqueue_style('slick','https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' );
 
 	wp_enqueue_script(
 		'twenty-twenty-one-carousel',
