@@ -466,6 +466,13 @@ function twenty_twenty_one_scripts() {
 		true
 	);
 
+	// include custom jQuery
+
+		wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), null, true);
+
+		wp_enqueue_script('slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array(), null, true);
+
+
 	wp_enqueue_script(
 		'twenty-twenty-one-carousel',
 		get_template_directory_uri() . '/assets/js/carousel.js',
