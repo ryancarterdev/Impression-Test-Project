@@ -1,0 +1,131 @@
+.header {
+    width: 100%;
+    background-color: $white;
+
+    @include md {
+        position: absolute;
+        top: 3.7rem;
+        left: 0;
+        z-index: 10;
+        background-color: transparent;
+    }
+}
+
+.header__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+    @include md {
+        padding: 2rem;
+        justify-content: center;
+    }
+}
+
+.header__navigation-open {
+    display: inline-block;
+    background-image: url(./assets/images/icons/burger-menu.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 4.2rem;
+    height: 4rem;
+    border: none;
+    background-color: transparent;
+    font-size: 0;
+
+    @include md {
+        display: none;
+    }
+}
+
+.header__mobile-button {
+    @include md {
+        display: none;
+    }
+}
+
+.site-logo {
+    position: absolute;
+    top: 3.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+
+    @include md {
+        top: 2rem;
+        left: 2rem;
+        transform: none;
+    }
+
+
+    .custom-logo {
+        max-width: 9.2rem;
+        max-height: 8.4rem;
+
+        @include md {
+            max-width: 12.8rem;
+            max-height: 11.5rem;
+        }
+    }
+}
+
+.header__mobile-options {
+    display: flex;
+    flex-direction: row;
+
+    .button--secondary {
+        display: none;
+    }
+
+    @include md {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    @include xl {
+        .button--secondary {
+            display: block;
+            font-size: 2rem;
+            line-height: 5.2rem;
+            padding: 0 4.5rem 0 2.5rem;
+            max-width: 20rem;
+            margin-right: 1rem;
+        }
+    }
+}
+
+.header__button {
+    background-image: url(./assets/images/icons/basket.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 5.2rem;
+    height: 5.2rem;
+    border: none;
+    background-color: transparent;
+    font-size: 0;
+
+    @include md {
+        display: inline-block;
+        background-image: url(./assets/images/icons/basket-white.svg);
+        min-width: 5.2rem;
+        transition: 0.3s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.header__button--account {
+    background-image: url(./assets/images/icons/account.svg);
+    margin-right: 0.7rem;
+
+    @include md {
+        background-image: url(./assets/images/icons/account-white.svg);
+        margin-right: 1rem;
+    }
+}

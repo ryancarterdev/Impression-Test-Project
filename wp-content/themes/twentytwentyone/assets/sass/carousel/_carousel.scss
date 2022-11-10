@@ -1,0 +1,358 @@
+.carousel {
+    position: relative;
+    background-color: $secondary;
+}
+
+.carousel__items {
+    position: relative;
+    max-height: 60rem;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -0.1rem;
+        left: 0;
+        width: 100%;
+        height: 20rem;
+        background-image: url(./assets/images/icons/purple-mask.svg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        z-index: 3;
+    }
+
+    @include md {
+        max-height: 78rem;
+    }
+}
+
+.carousel__item {
+    position: relative;
+    height: 100%;
+    max-height: 60rem;
+    margin: 0 auto;
+
+    @include md {
+        max-height: 78rem;
+    }
+}
+
+.carousel__background {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    min-height: 60rem;
+    background-color: $darkPurple;
+    padding: 10rem 0 0;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to left, rgba(0,0,0,0), $black);
+        opacity: 0.8;
+        z-index: 2;
+    }
+
+    @include md {
+        min-height: 78rem;
+        padding: 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0) 10%, $navy);
+            opacity: 0.8;
+            z-index: 2;
+        }
+    }
+}
+
+.carousel__background-image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    min-height: 60rem;
+    background-color: $secondary;
+
+    @include md {
+        max-height: 78rem;
+    }
+}
+
+.container {
+    max-width: 130rem;
+    margin: 0 auto;
+}
+
+.carousel__wrapper {
+    position: absolute;
+    top: 0;
+    padding: 2rem;
+    max-width: 60rem;
+    z-index: 5;
+    margin: auto;
+
+    @include md {
+        top: 50%;
+        transform: translatey(-50%);
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -7.4rem;
+            right: -4.6rem;
+            width: 14.9rem;
+            height: 16rem;
+            background-image: url(./assets/images/icons/splodge3.svg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            transform: rotate(177deg);
+        }
+    }
+}
+
+.carousel__header {
+    font-family: 'InformaPro Bold';
+    font-size: 3.8rem;
+    line-height: 3.8rem;
+    text-transform: uppercase;
+    color: $white;
+    display: inline-block;
+    transform: scale(1, 1.2);
+    margin: 3rem 0;
+
+    @include md {
+        font-size: 6.6rem;
+        line-height: 6.6rem;
+    }
+}
+
+.carousel__text {
+    font-size: 1.7rem;
+    color: $white;
+    margin: 0 0 3rem;
+
+    @include md {
+        font-size: 2.2rem;
+    }
+}
+
+.carousel__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include md {
+        justify-content: left;
+    }
+
+    a {
+        width: calc(50% - 0.5rem);
+        line-height: 1.4rem;
+        padding: 2rem 0;
+        max-width: none;
+
+        @include md {
+            padding: 2rem 2rem;
+            max-width: 22rem;
+        }
+    }
+}
+
+.carousel__roundal {
+    background-color: $orange;
+    width: 22.6rem;
+    height: 22.6rem;
+    border-radius: 100rem;
+    position: absolute;
+    bottom: 14rem;
+    left: -2rem;
+    transform: scale(0.6);
+    transform-origin: center;
+    margin: 3rem 0 0;
+    z-index: 9;
+    animation: pop 0.6s ease 0s;
+
+    @include md {
+        bottom: -2rem;
+        right: 17rem;
+        left: auto;
+        transform: scale(1);
+        z-index: 20;
+    }
+
+    @include lg {
+        bottom: 4.8rem;
+    }
+}
+
+.carousel__roundal-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.carousel__roundal-value {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    span {
+        font-family: 'InformaPro Bold'; 
+        font-size: 8.2rem;
+        color: $white;
+        width: 70%;
+        font-stretch: expanded;
+        display: inline-block;
+        transform: scale(1, 1.4);
+    }
+}
+
+.carousel__roundal-value-wrapper {
+    span {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 30%;
+        text-transform: uppercase;
+
+        &:first-of-type {
+            padding: 0.3rem 0 0;
+            font-size: 5rem;
+        }
+
+        &:not(:first-of-type) {
+            font-size: 2.6rem;
+        }
+    }
+}
+
+.carousel__roundal-bottom-wrapper {
+    width: 100%;
+    span {
+        display: block;
+        font-size: 1.7rem;
+        font-family: 'InformaPro Bold'; 
+        color: $navy;
+        text-transform: uppercase;
+    }
+}
+
+// Slick Overides
+
+.slick-next,
+.slick-prev {
+    position: absolute;
+    width: 5.6rem;
+    height: 5.2rem;
+    background-color: transparent;
+    border: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-size: 0;
+    transition: 0.3s;
+    z-index: 9;
+
+    @include md {
+        width: 7.4rem;
+        height: 7.4rem;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.slick-next {
+    bottom: 6rem;
+    right: 1.4rem;
+    background-image: url(./assets/images/icons/next-arrow.svg);
+
+    @include md {
+        bottom: 43rem;
+        right: 2rem;
+    }
+}
+
+.slick-prev {
+    bottom: 0;
+    right: 1.4rem;
+    background-image: url(./assets/images/icons/prev-arrow.svg);
+
+    @include md {
+        bottom: 35rem;
+        right: 2rem;
+    }
+}
+
+.slick-dots {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+    z-index: 8;
+
+    @include md {
+        position: absolute;
+        bottom: 3rem;
+        right: 4rem;
+    }
+
+    @include lg {
+        bottom: 8rem;
+    }
+
+    li {
+        padding: 3rem 0.5rem 0;
+        height: 1.2rem;
+        width: 1.2rem;
+
+        button {
+            font-size: 0;
+            background-color: transparent;
+            border: none;
+            height: 1.2rem;
+            width: 1.2rem;
+            background-image: url(./assets/images/icons/pagination.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            transition: 0.3s;
+
+            &:hover {
+                transform: scale(1.4);
+            }
+        }
+    }
+
+    .slick-active {
+        height: 2rem;
+        width: 2rem;
+
+        button {
+            height: 2rem;
+            width: 2rem;
+            background-image: url(./assets/images/icons/pagination-active.svg);
+            transition: 0.3s;
+        }
+    }
+}

@@ -1,7 +1,3 @@
-
-
-console.log('hello world');
-
 jQuery(".js-carousel").slick({
 
     infinite: false,

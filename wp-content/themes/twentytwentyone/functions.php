@@ -444,27 +444,7 @@ function twenty_twenty_one_scripts() {
 				'Element.prototype.matches && Element.prototype.closest && window.NodeList && NodeList.prototype.forEach' => 'twenty-twenty-one-ie11-polyfills-asset',
 			)
 		)
-	);
-
-	// Main navigation scripts.
-	if ( has_nav_menu( 'primary' ) ) {
-		wp_enqueue_script(
-			'twenty-twenty-one-primary-navigation-script',
-			get_template_directory_uri() . '/assets/js/primary-navigation.js',
-			array( 'twenty-twenty-one-ie11-polyfills' ),
-			wp_get_theme()->get( 'Version' ),
-			true
-		);
-	}
-
-	// Responsive embeds script.
-	wp_enqueue_script(
-		'twenty-twenty-one-responsive-embeds-script',
-		get_template_directory_uri() . '/assets/js/responsive-embeds.js',
-		array( 'twenty-twenty-one-ie11-polyfills' ),
-		wp_get_theme()->get( 'Version' ),
-		true
-	);
+			);
 
 	// include custom jQuery
 
@@ -475,8 +455,16 @@ function twenty_twenty_one_scripts() {
 		wp_enqueue_style('slick','https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' );
 
 	wp_enqueue_script(
-		'twenty-twenty-one-carousel',
+		'carousel',
 		get_template_directory_uri() . '/assets/js/carousel.js',
+		array( 'twenty-twenty-one-ie11-polyfills' ),
+		wp_get_theme()->get( 'Version' ),
+		true
+	);
+
+	wp_enqueue_script(
+		'menu',
+		get_template_directory_uri() . '/assets/js/menu.js',
 		array( 'twenty-twenty-one-ie11-polyfills' ),
 		wp_get_theme()->get( 'Version' ),
 		true

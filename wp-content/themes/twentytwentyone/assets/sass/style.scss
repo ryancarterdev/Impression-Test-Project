@@ -6,9 +6,15 @@
 @import "settings/mixin";
 @import "settings/buttons";
 @import "settings/typography";
+@import "settings/animations";
 
 // Carousel
 @import "carousel/carousel";
 
+// General
+@import "general/text-block";
+
 // Header
+@import "header/header";
+@import "header/navigation";
 @import "header/usp";
