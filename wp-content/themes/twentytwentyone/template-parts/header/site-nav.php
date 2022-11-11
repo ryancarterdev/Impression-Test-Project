@@ -11,6 +11,13 @@
 
 <?php if ( has_nav_menu( 'primary' ) ) : ?>
 
+<?php
+	$header_primary_button_label = get_field('header_primary_button_label');
+	$header_primary_button_url = get_field('header_primary_button_url');
+	$header_account_url = get_field('header_account_url');
+	$header_basket_url = get_field('header_basket_url');
+?>
+
 	<div class="header">
 		<div class="header__wrapper">
 			<div class="header__mobile-button">
@@ -32,14 +39,14 @@
 					);
 					?>
 					<div class="navigation__buttons">
-						<a href="#" class="button button--primary">make a booking</a>
+						<a href="<?php echo $header_primary_button_url; ?>" class="button button--primary"><?php echo $header_primary_button_label; ?></a>
 					</div>
 				</nav>
 			</div>
 			<div class="header__mobile-options">
-				<a class="button button--secondary" href="#">make a booking</a>
-				<a class="header__button header__button--account">Account Area</a>
-				<a class="header__button header__button--basket">Basket</a>
+				<a class="button button--secondary" href="<?php echo $header_primary_button_url; ?>"><?php echo $header_primary_button_label; ?></a>
+				<a class="header__button header__button--account" href="<?php echo $header_account_url; ?>">Account Area</a>
+				<a class="header__button header__button--basket" href="<?php echo $header_basket_url; ?>">Basket</a>
 			</div>
 		</div>
 	</div>
